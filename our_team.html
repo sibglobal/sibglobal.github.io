@@ -62,21 +62,17 @@ I belong to <strong>Panthera Dhalait</strong> which is a genus of the family fel
 </p>
 <a href="https://www.linkedin.com/in/mikaeel-muazzam-45632a372/" target="_blank">View on LinkedIn</a>
 <script>
-async function start() {
-    let r = await fetch("https://api.worldbank.org/v2/country/WLD/indicator/SP.POP.TOTL?format=json");
-    let d = await r.json();
-    let population = d[1][0].value;
-    const g = 2.47;
-    function u() {
-        population += g/10;
-        document.getElementById("world-population").innerText =
-            Math.floor(population).toLocaleString("en-US");
-    }
-    setInterval(u,100);
+let saved = localStorage.getItem("popv1");
+let population = saved ? parseFloat(saved) : 8200789000;
+const g = 2.47;
+function u() {
+    population += g/10;
+    document.getElementById("world-population").innerText =
+        Math.floor(population).toLocaleString("en-US");
+    localStorage.setItem("popv1", population);
 }
-start();
+setInterval(u,100);
 </script>
-
 </div>
 
     <div class="team-card shaurya">
@@ -120,6 +116,7 @@ start();
 
 </body>
 </html>
+
 
 
 
