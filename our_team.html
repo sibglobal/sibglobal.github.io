@@ -61,16 +61,22 @@ I have one purpose in life and that is to have no purpose in life, I accomplish 
 I belong to <strong>Panthera Dhalait</strong> which is a genus of the family felidae."
 </p>
 <a href="https://www.linkedin.com/in/mikaeel-muazzam-45632a372/" target="_blank">View on LinkedIn</a>
-
 <script>
-let population = 8220323278;
-const growthPerSecond = 2.3;
-function format(n){return n.toLocaleString('en-US');}
-setInterval(()=>{
-    population += growthPerSecond/10;
-    document.getElementById("world-population").innerText = format(Math.floor(population));
-},100);
+async function start() {
+    let r = await fetch("https://api.worldbank.org/v2/country/WLD/indicator/SP.POP.TOTL?format=json");
+    let d = await r.json();
+    let population = d[1][0].value;
+    const g = 2.47;
+    function u() {
+        population += g/10;
+        document.getElementById("world-population").innerText =
+            Math.floor(population).toLocaleString("en-US");
+    }
+    setInterval(u,100);
+}
+start();
 </script>
+
 </div>
 
     <div class="team-card shaurya">
@@ -114,6 +120,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
