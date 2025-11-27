@@ -53,9 +53,23 @@
     <div class="team-card ayaan">
       <img src="Ayaan.jpeg" alt="Ayaan">
       <h3>Ayaan Dhalait</h3>
-      <span class="role">Head of the SWC and CTO</span>
-      <p class="quote">“I am Ayaan Dhalait, I have one purpose in life and that is to have no purpose in life, I accomplish everything by accomplishing nothing, I belong to the genus <strong>Panthera Dhalait</strong> which is a genus of the family felidae."</p>
-      <a href="https://linkedin.com/in/dhalait/" target="_blank">View on LinkedIn</a>
+      <span class="role">Random Person & CTO</span>
+      <p class="quote">
+“I am a Random person out of 
+<span id="world-population">Loading…</span>,
+I have one purpose in life and that is to have no purpose in life, I accomplish everything by accomplishing nothing, 
+I belong to the genus <strong>Panthera Dhalait</strong> which is a genus of the family felidae."
+</p>
+
+<script>
+let population = 8220323278;
+const growthPerSecond = 2.3;
+function format(n){return n.toLocaleString('en-US');}
+setInterval(()=>{
+    population += growthPerSecond/10;
+    document.getElementById("world-population").innerText = "Population: " + format(Math.floor(population)) + " (counting live)";
+},100);
+</script>
     </div>
 
     <div class="team-card shaurya">
@@ -99,6 +113,7 @@
 
 </body>
 </html>
+
 
 
 
