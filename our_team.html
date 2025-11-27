@@ -61,21 +61,27 @@ I have one purpose in life and that is to have no purpose in life, I accomplish 
 I belong to <strong>Panthera Dhalait</strong> which is a genus of the family felidae."
       </p>
       <a href="https://www.linkedin.com/in/mikaeel-muazzam-45632a372/" target="_blank">View on LinkedIn</a>
+<span id="world-population">Loading…</span>
 <script>
-let saved = localStorage.getItem("popv1");
-let population = saved ? BigInt(saved) : 8220326304n;
-const g = 2n;
-function u() {
-    population += g;
-    document.getElementById("world-population").innerText =
-        population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    localStorage.setItem("popv1", population.toString());
-}
-document.getElementById("world-population").innerText =
-    population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-setInterval(u, 1000);
-</script>
+const data = null;
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
 
+xhr.addEventListener('readystatechange', function () {
+    if (this.readyState === this.DONE) {
+        const response = JSON.parse(this.responseText);
+        const population = BigInt(response.body.world_population); 
+        document.getElementById("world-population").innerText =
+            population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+});
+
+xhr.open('GET', 'https://world-population.p.rapidapi.com/worldpopulation');
+xhr.setRequestHeader('x-rapidapi-host', 'world-population.p.rapidapi.com');
+xhr.setRequestHeader('x-rapidapi-key', 'YOUR_RAPIDAPI_KEY'); // replace with your key
+
+xhr.send(data);
+</script>
     </div>
 
     <div class="team-card shaurya">
@@ -119,5 +125,6 @@ setInterval(u, 1000);
 
 </body>
 </html>
+
 
 
