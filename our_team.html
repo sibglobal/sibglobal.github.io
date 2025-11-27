@@ -50,30 +50,30 @@
       <a href="https://www.linkedin.com/in/mikaeel-muazzam-45632a372/" target="_blank">View on LinkedIn</a>
     </div>
 
-<div class="team-card ayaan">
-  <img src="Ayaan.jpeg" alt="Ayaan">
-  <h3>Ayaan Dhalait</h3>
-  <span class="role">Random Person & CTO</span>
-  <p class="quote">
+    <div class="team-card ayaan">
+      <img src="Ayaan.jpeg" alt="Ayaan">
+      <h3>Ayaan Dhalait</h3>
+      <span class="role">Random Person & CTO</span>
+      <p class="quote">
 “I am a Random person out of
 <span id="world-population">Loading…</span> people
 I have one purpose in life and that is to have no purpose in life, I accomplish everything by accomplishing nothing, 
 I belong to <strong>Panthera Dhalait</strong> which is a genus of the family felidae."
-</p>
-<a href="https://www.linkedin.com/in/mikaeel-muazzam-45632a372/" target="_blank">View on LinkedIn</a>
-<script>
-let saved = localStorage.getItem("popv1");
-let population = saved ? parseFloat(saved) : 8220326304;
-const g = 2.47;
-function u() {
-    population += g/10;
-    document.getElementById("world-population").innerText =
-        Math.floor(population).toLocaleString("en-US");
-    localStorage.setItem("popv1", population);
-}
-setInterval(u,100);
-</script>
-</div>
+      </p>
+      <a href="https://www.linkedin.com/in/mikaeel-muazzam-45632a372/" target="_blank">View on LinkedIn</a>
+      <script>
+        let saved = localStorage.getItem("popv1");
+        let population = saved ? BigInt(saved) : 8220326304n;
+        const g = 2n;
+        function u() {
+            population += g;
+            document.getElementById("world-population").innerText =
+                population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            localStorage.setItem("popv1", population.toString());
+        }
+        setInterval(u, 1000);
+      </script>
+    </div>
 
     <div class="team-card shaurya">
       <h3>Shaurya Swarana</h3>
@@ -116,15 +116,3 @@ setInterval(u,100);
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
