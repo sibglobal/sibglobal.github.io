@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SIB Idea Box</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+  <a href="/">
+    <img src="https://sibglobal.github.io/my_sibling.png" alt="Student Initiative Board Logo">
+  </a>
+</div>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/team/">Team</a>
+      <a href="/join/">Join</a>
+      <a href="/contact/">Contact</a>
+      <a href="/feedback/">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main class="form-page">
+  <h1>SIB Idea Box</h1>
+  <p class="subtitle">
+    Submit ideas to improve school life, events, and student engagement
+  </p>
+
+  <form class="sib-form" action="https://formspree.io/f/mjkqzqoy" method="POST">
+
+    <div class="field">
+      <input type="email" name="email" required>
+      <label>Email *</label>
+    </div>
+
+    <div class="field">
+      <input type="text" name="full_name" required>
+      <label>Full Name *</label>
+    </div>
+
+    <div class="field">
+      <input type="text" name="class_division" required>
+      <label>Class & Division *</label>
+    </div>
+
+    <div class="field">
+      <input type="text" name="idea_title" required>
+      <label>Idea Title *</label>
+    </div>
+
+    <div class="field">
+      <textarea name="idea_description" rows="4" required></textarea>
+      <label>What is the idea? *</label>
+    </div>
+
+    <div class="field">
+      <textarea name="problem" rows="3" required></textarea>
+      <label>What problem does it solve? *</label>
+    </div>
+
+    <div class="group">
+      <p>Who benefits from this idea? *</p>
+      <label><input type="checkbox" name="benefit" value="Entire School"> Entire School</label>
+      <label><input type="checkbox" name="benefit" value="Only Students"> Only Students</label>
+      <label><input type="checkbox" name="benefit" value="Only Teachers"> Only Teachers</label>
+      <label><input type="checkbox" name="benefit" value="Specific Group"> A specific group</label>
+      <label><input type="checkbox" name="benefit" value="Other"> Other</label>
+    </div>
+
+    <div class="field">
+      <textarea name="impact" rows="3" required></textarea>
+      <label>Why should this idea be implemented? *</label>
+    </div>
+
+    <div class="group">
+      <p>Would you be interested in helping with this idea? *</p>
+      <label><input type="radio" name="help_interest" value="Yes" required> Yes</label>
+      <label><input type="radio" name="help_interest" value="No"> No</label>
+      <label><input type="radio" name="help_interest" value="Maybe"> Maybe</label>
+    </div>
+
+    <div class="field">
+      <textarea name="other_details" rows="3"></textarea>
+      <label>Any Other Details</label>
+    </div>
+
+    <div class="group">
+      <label>
+        <input type="checkbox" required>
+        I consent to SIB implementing this idea and transferring IP rights. *
+      </label>
+    </div>
+
+    <button type="submit">Submit Idea</button>
+
+    <footer>
+  <p>© 2026 Student Initiative Boars. All rights reserved.</p>
+</footer>
+  </form>
+</main>
+
+</body>
+</html>

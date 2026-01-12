@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Form — SIB</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+  <a href="/">
+    <img src="https://sibglobal.github.io/my_sibling.png" alt="Student Initiative Board Logo">
+  </a>
+</div>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/team/">Team</a>
+      <a href="/join/">Join</a>
+      <a href="/contact/">Contact</a>
+      <a href="/feedback/">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<main class="form-page">
+  <h1>Application Form</h1>
+  <p class="subtitle">Apply to join the Student Initiative Board</p>
+
+  <form class="sib-form" action="https://formspree.io/f/xldlyyoq" method="POST">
+
+    <div class="field">
+      <input type="text" name="full_name" required>
+      <label>Full Name *</label>
+    </div>
+
+    <div class="field">
+      <input type="text" name="grade" required>
+      <label>Grade *</label>
+    </div>
+
+    <div class="field">
+      <input type="text" name="section" required>
+      <label>Section / Division *</label>
+    </div>
+
+    <div class="field">
+      <input type="email" name="email" required>
+      <label>Email *</label>
+    </div>
+
+    <div class="group">
+      <p>Do you study at Bishop’s Co-Ed School, Undri? *</p>
+      <label><input type="radio" name="bishop_student" value="Yes" required> Yes</label>
+      <label><input type="radio" name="bishop_student" value="No"> No</label>
+    </div>
+
+    <div class="field">
+      <input type="text" name="other_school">
+      <label>If No, specify school & branch</label>
+    </div>
+
+    <div class="field">
+      <select name="agency" required>
+        <option value="" disabled selected></option>
+        <option>Tech</option>
+        <option>Design</option>
+        <option>Content</option>
+        <option>Operations</option>
+        <option>Events</option>
+      </select>
+      <label>Select SIB Agency *</label>
+    </div>
+
+    <div class="field">
+      <textarea name="why_join" rows="4" required></textarea>
+      <label>Why do you want to join SIB? *</label>
+    </div>
+
+    <div class="field">
+      <textarea name="skills" rows="3" required></textarea>
+      <label>Relevant Skills *</label>
+    </div>
+
+    <div class="field">
+      <textarea name="achievements" rows="3"></textarea>
+      <label>Notable Achievements</label>
+    </div>
+
+    <div class="field">
+      <textarea name="other_details" rows="3"></textarea>
+      <label>Other Details</label>
+    </div>
+
+    <div class="group">
+      <label>
+        <input type="checkbox" required>
+        By submitting, I consent to SIB reviewing my application. Submission does not guarantee selection.
+      </label>
+    </div>
+
+    <button type="submit">Submit Application</button>
+
+    <footer>
+  <p>© 2026 Student Initiative Boars. All rights reserved.</p>
+</footer>
+  </form>
+</main>
+
+</body>
+</html>
